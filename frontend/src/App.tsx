@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Caliper />}></Route>
+        <Route path="/" element={<Caliper children={undefined} />}></Route>
       </Routes>
     </Router>
   );
