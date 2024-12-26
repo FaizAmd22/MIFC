@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "data1": "Identifier",
+        "data2": "Disc x absorber"
+    },
+    {
+        "id": 2,
+        "data1": "Joining Type",
+        "data2": "Existing Part Number"
+    },
+    {
+        "id": 3,
+        "data1": "Location",
+        "data2": "TMMIN Karawang, Plant 2, 1st Floor, -, SubAssy FR Axle Line ,  Assy Absorb x Caliper"
+    },
+    {
+        "id": 4,
+        "data1": "Relationship",
+        "data2": "In: P/n Engine (ID Material) & P/n Absorber x Knuckle (ID Material) Out: P/n Engine (ID Material)"
+    },
+    {
+        "id": 5,
+        "data1": "Cycle Time Standard",
+        "data2": "?"
+    }
+]

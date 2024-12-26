@@ -13,20 +13,21 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { useState } from "react";
 import { HiMiniSquares2X2 } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 // Menu items.
 const mifcItem = [
   {
     title: "Caliper",
-    url: "#",
+    url: "/caliper",
   },
   {
-    title: "Cluctch Disk",
-    url: "#",
+    title: "Clutch Disk",
+    url: "/clutch-disk",
   },
   {
     title: "VCT",
-    url: "#",
+    url: "/vct",
   },
 ];
 
@@ -34,25 +35,25 @@ const mifcItem = [
 const menuItem = [
   {
     title: "JIT Dashboard",
-    url: "#",
+    url: "/jit-dashboard",
   },
   {
     title: "Stagnation Problem Analysis",
-    url: "#",
+    url: "/stagnation-problem-analysis",
   },
   {
     title: "Profile",
-    url: "#",
+    url: "/profile",
   },
   {
     title: "Setting",
-    url: "#",
+    url: "/setting",
   },
 ];
 
 export function AppSidebar() {
   const theme = useSelector((state: RootState) => state.theme.theme);
-  const [activeItem, setActiveItem] = useState<string>("Home");
+  const [activeItem, setActiveItem] = useState<string>("Caliper");
 
   return (
     <Sidebar>
@@ -70,8 +71,8 @@ export function AppSidebar() {
               {mifcItem.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a
-                      href={item.url}
+                    <Link
+                      to={item.url}
                       onClick={() => setActiveItem(item.title)}
                       className={`flex items-center gap-2 px-4 py-2 rounded-md ${
                         activeItem === item.title
@@ -83,7 +84,7 @@ export function AppSidebar() {
                     >
                       <HiMiniSquares2X2 />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

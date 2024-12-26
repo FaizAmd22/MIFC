@@ -10,7 +10,6 @@ import { RootState } from "@/store";
 import { useState } from "react";
 import rightbarIcons from "@/pages/caliper/data/Icon";
 
-
 export function CanvasSidebar() {
   const theme = useSelector((state: RootState) => state.theme.theme);
   const [activeIcon, setActiveIcon] = useState<string>("");
@@ -18,9 +17,7 @@ export function CanvasSidebar() {
   return (
     <Sidebar side="right">
       <SidebarContent
-        className={`rightbar ${
-          theme !== "light" ? "bg-[#2C2C2C]" : "bg-[#F8F8F8]"
-        } border-l border-gray-300`}
+        className={`${theme !== "light" ? "bg-[#2C2C2C]" : "bg-[#D9D9D9]"}`}
       >
         <SidebarGroup>
           <SidebarGroupLabel className="ml-2 mt-4 mb-4 font-bold">

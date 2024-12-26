@@ -1,36 +1,46 @@
 // Impor gambar dari folder assets
-import buildIcon from '../../../assets/build.png';
-import chuteIcon from '../../../assets/chute.png';
-import dollyConveyanceIcon from '../../../assets/Dolly Conveyance.png';
-import text1Icon from '../../../assets/Text1.png';
-import text2Icon from '../../../assets/Text2.png';
-import text3Icon from '../../../assets/Text3.png';
-import text4Icon from '../../../assets/Text4.png';
-import text5Icon from '../../../assets/Text5.png';
-import text6Icon from '../../../assets/Text6.png';
-import text7Icon from '../../../assets/Text7.png';
-import prosesIcon from '../../../assets/proses.png';
-import sequenceLaneIcon from '../../../assets/sequence-lane.png';
-import text8Icon from '../../../assets/Text8.png';
-import storeIcon from '../../../assets/store.png';
+import buildIcon from "../../../assets/icon01.svg";
+import chuteIcon from "../../../assets/icon02.svg";
+import dollyConveyanceIcon from "../../../assets/icon03.svg";
+import intructionIcon from "../../../assets/icon04.svg";
+import kanbanPostIcon from "../../../assets/icon05.svg";
+import kanbanPost2Icon from "../../../assets/icon06.svg";
+import kanbanPost3Icon from "../../../assets/icon07.svg";
+import kanbanIcon from "../../../assets/icon08.svg";
+import otherIcon from "../../../assets/icon09.svg";
+import shipConveyanceIcon from "../../../assets/icon10.svg";
+import processIcon from "../../../assets/icon11.svg";
+import sequenceLaneIcon from "../../../assets/icon12.svg";
+import text8Icon from "../../../assets/icon13.svg";
+import storeIcon from "../../../assets/icon14.svg";
+import yamaIcon from "../../../assets/icon15.svg";
+import truckConveyanceIcon from "../../../assets/icon16.svg";
+import blackArrowIcon from "../../../assets/icon17.svg";
+import redArrowIcon from "../../../assets/icon18.svg";
+import destinationIcon from "../../../assets/icon19.svg";
+import addTextIcon from "../../../assets/icon20.svg";
 
-const rightbarIcons = [
-  { name: "Build", icon: <img src={buildIcon} alt="Store" className="w-12 h-12" /> },
-  { name: "Chute", icon: <img src={chuteIcon} alt="Store" className="w-12 h-12" /> },
-  { name: "Dolly Conveyance", icon: <img src={dollyConveyanceIcon} alt="Dolly Conveyance" className="w-12 h-12" /> },
-  { name: "Text 1", icon: <img src={text1Icon} alt="Text 1" className="w-12 h-12" /> },
-  { name: "Text 2", icon: <img src={text2Icon} alt="Text 2" className="w-12 h-12" /> },
-  { name: "Text 3", icon: <img src={text3Icon} alt="Text 3" className="w-12 h-12" /> },
-  { name: "Text 4", icon: <img src={text4Icon} alt="Text 4" className="w-12 h-12" /> },
-  { name: "Text 5", icon: <img src={text5Icon} alt="Text 5" className="w-12 h-12" /> },
-  { name: "Text 6", icon: <img src={text6Icon} alt="Text 6" className="w-12 h-12" /> },
-  { name: "Text 7", icon: <img src={text7Icon} alt="Text 7" className="w-12 h-12" /> },
-  { name: "Proses", icon: <img src={prosesIcon} alt="Proses" className="w-12 h-12" /> },
-  { name: "Sequence Lane", icon: <img src={sequenceLaneIcon} alt="Sequence Lane" className="w-12 h-12" /> },
-  { name: "Text 8", icon: <img src={text8Icon} alt="Text 8" className="w-12 h-12" /> },
-  { name: "Store", icon: <img src={storeIcon} alt="Store" className="w-12 h-12" /> },
-  
-  // Tambahkan ikon lain sesuai kebutuhan
+const listIcons = [
+  { name: "Build", icon: buildIcon },
+  { name: "Chute", icon: chuteIcon },
+  { name: "Dolly Conveyance", icon: dollyConveyanceIcon },
+  { name: "Intruction", icon: intructionIcon },
+  { name: "Kanban Post", icon: kanbanPostIcon },
+  { name: "Kanban Post 2", icon: kanbanPost2Icon },
+  { name: "Kanban Post 3", icon: kanbanPost3Icon },
+  { name: "Kanban", icon: kanbanIcon },
+  { name: "Other", icon: otherIcon },
+  { name: "Ship Conveyance", icon: shipConveyanceIcon },
+  { name: "Process", icon: processIcon },
+  { name: "Sequence Lane", icon: sequenceLaneIcon },
+  { name: "Text 8", icon: text8Icon },
+  { name: "Store", icon: storeIcon },
+  { name: "Yama", icon: yamaIcon },
+  { name: "Truck Conveyance", icon: truckConveyanceIcon },
+  { name: "Black Arrow", icon: blackArrowIcon },
+  { name: "Red Arrow", icon: redArrowIcon },
+  { name: "Destination", icon: destinationIcon },
+  { name: "Add Text", icon: addTextIcon },
 ];
 
-export default rightbarIcons;
+export default listIcons;

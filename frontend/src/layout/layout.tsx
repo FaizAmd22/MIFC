@@ -1,9 +1,10 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
+import { Outlet } from "react-router-dom";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
   const theme = useSelector((state: RootState) => state.theme.theme);
 
   return (
@@ -16,8 +17,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             : "bg-[#F1F1F1] text-black"
         }`}
       >
-        <SidebarTrigger />
-        {children}
+        {/* <SidebarTrigger /> */}
+        <Outlet />
       </main>
     </SidebarProvider>
   );

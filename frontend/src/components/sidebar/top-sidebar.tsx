@@ -21,7 +21,7 @@ const TopSidebar = () => {
         </Avatar>
 
         {/* Text */}
-        <p className="text-lg text-[#FF2626] ml-[-8px]">Mazer</p>
+        <p className="text-lg text-red-600 uppercase font-bold">Digital Twin Dashboard</p>
       </div>
 
       {/* Theme Mode */}
@@ -35,7 +35,7 @@ const TopSidebar = () => {
         {/* Toogle */}
         <div
           className={`w-12 h-6 flex items-center p-1 rounded-full cursor-pointer border border-black ${
-            theme !== "light" ? "bg-[#FF2626]" : "bg-[#D9D9D9]"
+            theme !== "light" ? "bg-red-600" : "bg-[#D9D9D9]"
           }`}
           onClick={() => dispatch(toggleTheme())}
         >
@@ -43,7 +43,7 @@ const TopSidebar = () => {
             className={`w-4 h-4 rounded-full shadow-md transform transition-transform ${
               theme !== "light"
                 ? "translate-x-6 bg-white"
-                : "translate-x-0  bg-[#FF2626]"
+                : "translate-x-0  bg-red-600"
             }`}
           ></div>
         </div>

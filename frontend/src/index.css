@@ -88,3 +88,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+.react-resizable-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.react-resizable {
+  position: relative !important;
+}
+
+.react-resizable-box {
+  overflow: hidden !important;
+}
