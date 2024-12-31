@@ -6,6 +6,7 @@ interface SidebarProps {
   closeSidebar: () => void;
   handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   saveShape: () => void;
+  addCircle: () => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -14,28 +15,24 @@ const Sidebar: React.FC<SidebarProps> = ({
   closeSidebar,
   handleFormChange,
   saveShape,
+  addCircle,
 }) => {
   return (
     <div
       style={{
-        position: "fixed",
-        right: 0,
-        top: 0,
-        width: "300px",
         height: "100%",
         padding: "10px",
         borderLeft: "1px solid #ccc",
-        backgroundColor: "#fff",
       }}
     >
-      <h2 className="text-lg font-bold mb-4">Edit Shape Data</h2>
       <button
         onClick={closeSidebar}
-        className="bg-red-500 text-white px-4 py-2 rounded mb-4"
+        className="w-full bg-red-500 text-white px-4 py-2 rounded mb-4"
       >
         Close
       </button>
-      {selectedId ? (
+
+      {selectedId && (
         <>
           <label>
             Field 1:
@@ -59,6 +56,12 @@ const Sidebar: React.FC<SidebarProps> = ({
           </label>
           <div className="flex justify-end mt-4">
             <button
+              onClick={addCircle}
+              className="bg-gray-700 text-white px-4 py-2 rounded"
+            >
+              Add Circle
+            </button>
+            <button
               onClick={saveShape}
               className="bg-green-500 text-white px-4 py-2 rounded"
             >
@@ -66,9 +69,9 @@ const Sidebar: React.FC<SidebarProps> = ({
             </button>
           </div>
         </>
-      ) : (
-        <p>Select a shape to edit</p>
       )}
+
+      {!selectedId && <p>Select a shape to edit</p>}
     </div>
   );
 };

@@ -1,11 +1,13 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CiLight } from "react-icons/ci";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// import userAvatar from "@/assets/Avatar.svg";
 import { CiDark } from "react-icons/ci";
-import userAvatar from "@/assets/Avatar.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { toggleTheme } from "@/slices/themeSlice";
+import Logo from "../../assets/logo_tmmin.svg";
+import Logo2 from "../../assets/logo_tmmin2.svg";
+import { Link } from "react-router-dom";
 
 const TopSidebar = () => {
   const dispatch = useDispatch();
@@ -13,16 +15,21 @@ const TopSidebar = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center">
-        {/* Avatar */}
+      {/* <div className="flex justify-center items-center">
         <Avatar>
           <AvatarImage src={userAvatar} alt="@shadcn" className="w-[20px]" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-
-        {/* Text */}
+        
         <p className="text-lg text-red-600 uppercase font-bold">Digital Twin Dashboard</p>
-      </div>
+      </div> */}
+      <Link to={"/"}>
+        <img
+          src={theme === "light" ? Logo : Logo2}
+          alt="Logo TMMIN"
+          style={{ width: "120px", marginTop: "15px" }}
+        />
+      </Link>
 
       {/* Theme Mode */}
       <div className="flex justify-center gap-3">
@@ -35,7 +42,7 @@ const TopSidebar = () => {
         {/* Toogle */}
         <div
           className={`w-12 h-6 flex items-center p-1 rounded-full cursor-pointer border border-black ${
-            theme !== "light" ? "bg-red-600" : "bg-[#D9D9D9]"
+            theme !== "light" ? "bg-red-600" : "bg-[#F5F5F5]"
           }`}
           onClick={() => dispatch(toggleTheme())}
         >
