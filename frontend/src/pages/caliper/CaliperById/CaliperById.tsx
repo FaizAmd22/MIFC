@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import CanvasComponent from "../components/CanvasKonva";
+import { Link, useParams } from "react-router-dom";
+import CanvasById from "./components/CanvasById";
 
 // Komponen untuk halaman /caliper/:id
 const CaliperById = () => {
@@ -24,15 +24,19 @@ const CaliperById = () => {
   }
 
   return (
-    <div>
-      <div className="px-5">
+    <div className="h-screen overflow-hidden">
+      <div className="px-5 flex gap-10 items-center">
         <p className="text-3xl font-bold h-[10vh] flex items-center">
           MIFC Drawing
         </p>
+
+        <Link to={`/caliper/${id}/edit`} className="bg-red-700 px-14 py-2 font-semibold rounded-full text-white text-lg">
+          Edit
+        </Link>
       </div>
 
       {/* Panggil CanvasComponent dengan data yang telah diambil */}
-      <CanvasComponent data={canvasData} />
+      <CanvasById data={canvasData} />
     </div>
   );
 };

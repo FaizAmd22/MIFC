@@ -2,13 +2,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useState } from "react";
 import { Stage, Layer, Arrow, Circle } from "react-konva";
-import DraggableResizableIcon from "./DraggableResizableIcon";
-import Sidebar from "./Sidebar";
-import DeleteConfirmationModal from "./DeleteConfirmationModal";
-import listIcons from "../data/Icon";
-import BlackArrow from "../../../assets/toolbarIcons/icon17.svg";
-import RedArrow from "../../../assets/toolbarIcons/icon18.svg";
-import SaveModal from "./SaveModal";
+import DraggableResizableIcon from "../../components/DraggableResizableIcon";
+import SideToolbar from "../../components/SideToolbar";
+import DeleteConfirmationModal from "../../components/DeleteConfirmationModal";
+import listIcons from "../../data/Icon";
+import BlackArrow from "../../../../assets/toolbarIcons/icon17.svg";
+import RedArrow from "../../../../assets/toolbarIcons/icon18.svg";
+import SaveModal from "../../components/SaveModal";
 import { Button } from "@/components/ui/button";
 
 interface ShapeProps {
@@ -28,7 +28,7 @@ interface CircleProps {
   radius: number;
 }
 
-const CanvasComponent: React.FC<{ data: any }> = ({ data }) => {
+const CanvasEdit: React.FC<{ data: any }> = ({ data }) => {
   const { shapes, connections } = data;
   const canvasId = data.id;
 
@@ -92,23 +92,6 @@ const CanvasComponent: React.FC<{ data: any }> = ({ data }) => {
     setSelectedId(newShape.id); // Pastikan shape baru dipilih
     setSidebarVisible(true); // Tampilkan sidebar untuk shape baru
     setFormData({}); // Reset form data
-  };
-
-  const addCircle = () => {
-    if (selectedId) {
-      const selectedShape = shapesState.find(
-        (shape: any) => shape.id === selectedId
-      );
-      if (selectedShape) {
-        const newCircle: CircleProps = {
-          id: Date.now().toString(),
-          x: selectedShape.x + selectedShape.width / 2,
-          y: selectedShape.y + selectedShape.height / 2,
-          radius: 20, // You can adjust the radius as needed
-        };
-        setCircles((prevCircles) => [...prevCircles, newCircle]);
-      }
-    }
   };
 
   const handleIconClick = (shape: ShapeProps) => {
@@ -351,13 +334,12 @@ const CanvasComponent: React.FC<{ data: any }> = ({ data }) => {
 
       <div className="col-span-2 h-[90vh] overflow-y-auto pb-10">
         {sidebarVisible && (
-          <Sidebar
+          <SideToolbar
             formData={formData}
             selectedId={selectedId}
             closeSidebar={closeSidebar}
             handleFormChange={handleFormChange}
             saveShape={saveShape}
-            addCircle={addCircle}
           />
         )}
 
@@ -441,4 +423,4 @@ const CanvasComponent: React.FC<{ data: any }> = ({ data }) => {
   );
 };
 
-export default CanvasComponent;
+export default CanvasEdit;

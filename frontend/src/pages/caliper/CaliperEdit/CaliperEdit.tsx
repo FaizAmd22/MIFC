@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CanvasComponent from "../components/CanvasKonva";
+import CanvasEdit from "./components/CanvasEdit";
 
 // Komponen untuk halaman /caliper/:id
 const CaliperEdit = () => {
@@ -31,8 +31,8 @@ const CaliperEdit = () => {
         </p>
       </div>
 
-      {/* Panggil CanvasComponent dengan data yang telah diambil */}
-      <CanvasComponent data={canvasData} />
+      {/* Panggil CanvasEdit dengan data yang telah diambil */}
+      <CanvasEdit data={canvasData} />
     </div>
   );
 };

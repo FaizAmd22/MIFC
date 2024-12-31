@@ -6,16 +6,14 @@ interface SidebarProps {
   closeSidebar: () => void;
   handleFormChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   saveShape: () => void;
-  addCircle: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({
+const SideToolbar: React.FC<SidebarProps> = ({
   formData,
   selectedId,
   closeSidebar,
   handleFormChange,
   saveShape,
-  addCircle,
 }) => {
   return (
     <div
@@ -56,12 +54,6 @@ const Sidebar: React.FC<SidebarProps> = ({
           </label>
           <div className="flex justify-end mt-4">
             <button
-              onClick={addCircle}
-              className="bg-gray-700 text-white px-4 py-2 rounded"
-            >
-              Add Circle
-            </button>
-            <button
               onClick={saveShape}
               className="bg-green-500 text-white px-4 py-2 rounded"
             >
@@ -76,4 +68,4 @@ const Sidebar: React.FC<SidebarProps> = ({
   );
 };
 
-export default Sidebar;
+export default SideToolbar;
